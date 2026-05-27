@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <a class="logo" routerLink="/">TM</a>
+    <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/projects" (click)="closeMenu()">Projects</a></li>
+      <li><a routerLink="/experience" (click)="closeMenu()">Experience</a></li>
+      <li><a routerLink="/skills" (click)="closeMenu()">Skills</a></li>
+      <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
