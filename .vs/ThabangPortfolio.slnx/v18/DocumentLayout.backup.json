@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\enviroments\\enviroment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\enviroments\\enviroment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\services\\portfolio.data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\services\\portfolio.data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\services\\email.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\services\\email.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "enviroment.ts",
-              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\enviroments\\enviroment.ts",
-              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\enviroments\\enviroment.ts",
-              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\enviroments\\enviroment.ts",
-              "RelativeToolTip": "ThabangPortfolio\\src\\enviroments\\enviroment.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAMAAAAAAAAAA==",
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\README.md",
+              "RelativeDocumentMoniker": "ThabangPortfolio\\README.md",
+              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\README.md",
+              "RelativeToolTip": "ThabangPortfolio\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-27T13:30:43.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.routes.ts",
+              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.routes.ts",
+              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\app.routes.ts",
+              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.routes.ts",
+              "RelativeToolTip": "ThabangPortfolio\\src\\app\\app.routes.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-05-27T07:45:28.483Z",
+              "WhenOpened": "2026-05-27T10:13:18.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "portfolio.data.service.ts",
-              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
-              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
-              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
-              "RelativeToolTip": "ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAADAAAAAAAAAA==",
+              "Title": "app.config.ts",
+              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.config.ts",
+              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\app.config.ts",
+              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.config.ts",
+              "RelativeToolTip": "ThabangPortfolio\\src\\app\\app.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-05-27T07:40:59.814Z",
+              "WhenOpened": "2026-05-27T10:06:47.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "email.service.ts",
+              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\services\\email.service.ts",
+              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\services\\email.service.ts",
+              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\services\\email.service.ts",
+              "RelativeToolTip": "ThabangPortfolio\\src\\app\\services\\email.service.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-27T09:34:50.12Z",
               "EditorCaption": ""
             },
             {
