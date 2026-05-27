@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\enviroments\\enviroment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\enviroments\\enviroment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\services\\portfolio.data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\services\\portfolio.data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "enviroment.ts",
+              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\enviroments\\enviroment.ts",
+              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\enviroments\\enviroment.ts",
+              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\enviroments\\enviroment.ts",
+              "RelativeToolTip": "ThabangPortfolio\\src\\enviroments\\enviroment.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-27T07:45:28.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "portfolio.data.service.ts",
+              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
+              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
+              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
+              "RelativeToolTip": "ThabangPortfolio\\src\\app\\services\\portfolio.data.service.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-27T07:40:59.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             }
           ]
         }

@@ -26,7 +26,7 @@ export interface Education {
 }
 
 export interface SkillGroup {
-  catregory: string;
+  category: string;
   items: string[];
 }
 
@@ -116,3 +116,56 @@ export class PortfolioDataService {
       }
     ];
   }
+
+  getEducation(): Education[] {
+    return [
+      {
+        degree: 'Diploma in IT Software Development | NQF Level 6',
+        institution: 'Rosebank College, Braamfontein',
+        year: 'Graduated Dec 2024',
+        details: 'Distinctions in 9 modules - highest cohort score in WIL 3B (94%). Key: Web Dev (82%), HCI (91%), Advanced Databases (76%).'
+      },
+      {
+        degree: 'National Senior Certificate (Higher Certificate & Diploma Pass)',
+        institution: 'Horizon International High School, Turflontein',
+        year: 'Dec 2020',
+        details: 'University entrance exemption.'
+      }
+    ];
+  }
+
+  getskills(): SkillGroup[] {
+    return [
+      {
+        category: 'Languages',
+        items: ['JavaScript/TS', 'PHP 8', 'C#', 'Kotlin', 'Java', 'SQL']
+      },
+
+      {
+        category: 'Frontend',
+        items: ['Angular 17', 'React 18', 'RxJS', 'Tailwind CSS', 'HTML5/CSS3']
+      },
+
+      {
+        category: 'Backend',
+        items: ['ASP.NET Core 9', 'Laravel 11', 'Node.js/Express', 'REST APIs']
+      },
+
+      {
+        category: 'Cloud & DevOps',
+        items: ['Microsoft Azure', 'Docker', 'GitHub Actions', 'Azure Pipelines', 'Laravel Forge']
+      },
+      {
+        category: 'Testing & QA',
+        items: ['JUnit', 'Postman', 'UAT', 'Regression', '85-95% coverage']
+      }
+    ];
+  }
+
+  getCertifications(): string[] {
+    return [
+      'SkillUp Full Stack Development — Certificate of Completion',
+      'SkillUp Cloud Computing Fundamentals — Certification'
+    ];
+  }
+}
