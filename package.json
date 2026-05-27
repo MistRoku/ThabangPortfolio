@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^21.0.3"
+  }
+}
