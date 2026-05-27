@@ -77,3 +77,42 @@ export class PortfolioDataService {
 
     ];
   }
+
+  getWorkExperience(): WorkExperience[] {
+    return [
+      {
+        company: 'Reliance Corporation',
+        role: 'Junior IT Engineer (Operations & Software Coordination)',
+        period: 'Feb 2026 - Present',
+        location: 'Alberton, South Africa',
+        achievements: [
+          'Selected to join software development team; write BRDs, review builds, track sprints.',
+          'Conduct QA regression & UAT testing across retail systems, reducing post-deployment incidents.',
+          'Maintain Windows/Linux servers, network infrastructure (cabling, IP cameras), Tier 1/2 support.'
+        ]
+      },
+      {
+        company: 'Reliance Corporation',
+        role: 'IT Software & Hardware Support Intern',
+        period: 'Aug 2025 - Jan 2026',
+        location: 'Alberton, South Africa',
+        achievements: [
+          'Developed & deployed RCPOS/POS Lite (PHP/Laravel) to live clients.',
+          'Worked on office relocation network rebuild (RJ45 crimping, switch patching, server rack).',
+          'Managed full IT asset registry and provided helpdesk support.'
+        ]
+      },
+
+      {
+        company: 'Cogent Creations / Rosebank College WIL',
+        role: 'Project Manager & Full-Stack Developer (Capstone)',
+        period: 'Jan 2024 - Dec 2024',
+        location: 'Braamfontein',
+        achievements: [
+          'Managed 3-person Agile team; delivered Light of Literacy earning 94% Distinction (highest cohort).',
+          'Built end-to-end: Kotlin Android, Node.js/Express, MySQL + Firebase, Azure DevOps.',
+          'Authored ERDs, UML, architectural docs and 18-case test plan.'
+        ]
+      }
+    ];
+  }
