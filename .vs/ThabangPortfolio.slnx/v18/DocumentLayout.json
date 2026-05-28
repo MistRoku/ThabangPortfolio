@@ -3,40 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\shared\\project-card\\project-card.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\shared\\project-card\\project-card.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\pages\\projects\\projects.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\pages\\projects\\projects.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\pages\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\pages\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\components\\nav\\nav.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\components\\nav\\nav.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\app.routes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\services\\email.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\services\\email.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\shared\\project-card\\project-card.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\shared\\project-card\\project-card.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\app.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|c:\\users\\thabangm\\source\\repos\\thabangportfolio\\thabangportfolio\\src\\app\\services\\email.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1C2D49A0-E661-746D-2B83-A9E0EF5A9D1D}|ThabangPortfolio\\ThabangPortfolio.esproj|solutionrelative:thabangportfolio\\src\\app\\services\\email.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "project-card.component.html",
               "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\shared\\project-card\\project-card.component.html",
               "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\shared\\project-card\\project-card.component.html",
@@ -63,33 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "projects.component.html",
-              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\pages\\projects\\projects.component.html",
-              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\pages\\projects\\projects.component.html",
-              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\pages\\projects\\projects.component.html",
-              "RelativeToolTip": "ThabangPortfolio\\src\\app\\pages\\projects\\projects.component.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-05-27T19:20:13.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "home.component.html",
-              "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\pages\\home\\home.component.html",
-              "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\pages\\home\\home.component.html",
-              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\pages\\home\\home.component.html",
-              "RelativeToolTip": "ThabangPortfolio\\src\\app\\pages\\home\\home.component.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-05-27T18:21:41.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "nav.component.html",
               "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\components\\nav\\nav.component.html",
               "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\components\\nav\\nav.component.html",
@@ -102,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "app.component.html",
               "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.component.html",
               "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\app.component.html",
@@ -115,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\README.md",
               "RelativeDocumentMoniker": "ThabangPortfolio\\README.md",
@@ -128,20 +94,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "app.routes.ts",
               "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.routes.ts",
               "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\app.routes.ts",
-              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.routes.ts",
-              "RelativeToolTip": "ThabangPortfolio\\src\\app\\app.routes.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.routes.ts*",
+              "RelativeToolTip": "ThabangPortfolio\\src\\app\\app.routes.ts*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-05-27T10:13:18.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "app.config.ts",
               "DocumentMoniker": "C:\\Users\\thabangm\\source\\repos\\ThabangPortfolio\\ThabangPortfolio\\src\\app\\app.config.ts",
               "RelativeDocumentMoniker": "ThabangPortfolio\\src\\app\\app.config.ts",
