@@ -1,1 +1,12 @@
-<h1>Experience</h1> 
+<div class="container">
+  <h2>Work Experience</h2>
+  <div class="timeline">
+    <div *ngFor="let job of workExperiences" class="timeline-item">
+      <div class="timeline-header"><h3>{{ job.role }}</h3><span>{{ job.period }}</span></div>
+      <div class="company">{{ job.company }} | {{ job.location }}</div>
+      <ul><li *ngFor="let ach of job.achievements">{{ ach }}</li></ul>
+    </div>
+  </div>
+  <h2>Education</h2>
+  <div class="education" *ngFor="let edu of education"><h3>{{ edu.degree }}</h3><p>{{ edu.institution }} ({{ edu.year }}) - {{ edu.details }}</p></div>
+</div>

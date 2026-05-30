@@ -1,1 +1,10 @@
-<h1>Skills</h1> 
+<div class="container">
+  <h2>Technical Skills</h2>
+  <div class="skills-groups">
+    <div *ngFor="let group of skillGroups" class="skill-group">
+      <h3>{{ group.category }}</h3>
+      <div class="skills-list"><span *ngFor="let skill of group.items">{{ skill }}</span></div>
+    </div>
+  </div>
+  <div class="certifications"><h3>Certifications</h3><ul><li *ngFor="let cert of certifications">{{ cert }}</li></ul></div>
+</div>

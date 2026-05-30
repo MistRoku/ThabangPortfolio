@@ -1,1 +1,17 @@
-<h1>Contact</h1> 
+<div class="container contact-page">
+  <div class="contact-info">
+    <h2>Get In Touch</h2>
+    <p><strong>Email:</strong> {{ personalInfo.email }}</p>
+    <p><strong>Phone:</strong> {{ personalInfo.phone }}</p>
+    <p><strong>Location:</strong> {{ personalInfo.location }}</p>
+    <p><strong>Reference:</strong> Paul Nyembo — Manager, CSD at Reliance Corporation | +27 82 677 4412</p>
+  </div>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required>
+    <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required>
+    <textarea name="message" [(ngModel)]="formData.message" placeholder="Your Message" required rows="5"></textarea>
+    <button type="submit" [disabled]="sending">{{ sending ? 'Sending...' : 'Send Message' }}</button>
+    <p *ngIf="successMsg" class="success">{{ successMsg }}</p>
+    <p *ngIf="errorMsg" class="error">{{ errorMsg }}</p>
+  </form>
+</div>
