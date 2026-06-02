@@ -1,6 +1,52 @@
 <div class="container">
   <h2>Projects</h2>
   <div class="projects-grid">
-    <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+    <div *ngFor="let project of projects" class="card glass-card" (click)="openModal(project)">
+      <div class="card-img" [style.backgroundImage]="'url(' + project.imageUrl + ')'"></div>
+      <div class="card-content">
+        <h3>{{ project.title }}</h3>
+        <p class="tech">{{ project.techStack }}</p>
+        <p>{{ project.description }}</p>
+        <div class="highlight">{{ project.highlight }}</div>
+        <div class="project-links">
+          <a *ngIf="project.demoLink" [href]="project.demoLink" target="_blank" class="btn small" (click)="$event.stopPropagation()">Live Demo</a>
+          <a *ngIf="project.githubLink" [href]="project.githubLink" target="_blank" class="btn small" (click)="$event.stopPropagation()">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Detail View -->
+<div *ngIf="modalOpen" class="modal" (click)="onBackdropClick($event)">
+  <div class="modal-content glass-card">
+    <span class="close-btn" (click)="closeModal()">&times;</span>
+    <div *ngIf="selectedProject" class="modal-body">
+      <h2>{{ selectedProject.title }}</h2>
+      <div class="modal-image" *ngIf="selectedProject.imageUrl">
+        <img [src]="selectedProject.imageUrl" alt="{{ selectedProject.title }}">
+      </div>
+      <p class="modal-description">{{ selectedProject.fullDescription }}</p>
+
+      <h3>🛠️ Tech Stack</h3>
+      <ul class="tech-list">
+        <li *ngFor="let tech of selectedProject.techStackDetails">{{ tech }}</li>
+      </ul>
+
+      <h3>⚙️ Key Functions</h3>
+      <ul class="functions-list">
+        <li *ngFor="let func of selectedProject.keyFunctions">{{ func }}</li>
+      </ul>
+
+      <h3>📘 User Guide</h3>
+      <div class="user-guide">
+        <p>{{ selectedProject.userGuideSummary }}</p>
+      </div>
+
+      <div class="modal-links">
+        <a *ngIf="selectedProject.demoLink" [href]="selectedProject.demoLink" target="_blank" class="btn primary">Live Demo</a>
+        <a *ngIf="selectedProject.githubLink" [href]="selectedProject.githubLink" target="_blank" class="btn secondary">GitHub Repository</a>
+      </div>
+    </div>
   </div>
 </div>

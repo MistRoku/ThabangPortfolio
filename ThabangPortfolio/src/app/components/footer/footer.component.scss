@@ -1,0 +1,94 @@
+.footer {
+  background: rgba(5, 5, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 102, 255, 0.4);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer p {
+    color: #b0b0ff;
+    font-size: 0.9rem;
+    margin: 0;
+    letter-spacing: 0.3px;
+  }
+
+/* Social links container */
+.social-links {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+  .social-links a {
+    color: #b0b0ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    padding: 0.25rem 0;
+  }
+
+    /* Underline effect on hover (optional, consistent with navbar) */
+    .social-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--primary-purple));
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-cyan);
+      text-shadow: 0 0 6px rgba(0, 229, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+      .social-links a:hover::after {
+        width: 100%;
+      }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+  }
+
+    .footer .container {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.8rem;
+      padding: 0 1rem;
+    }
+
+  .social-links {
+    gap: 1.2rem;
+  }
+
+    .social-links a::after {
+      display: none; /* cleaner on mobile */
+    }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}

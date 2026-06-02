@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+/* ===== Enhanced Blue-Black-Purple Tech Theme ===== */
+/* Force vertical scrolling – prevents modal lock */
+html, body {
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== Enhanced Blue-Black-Purple Tech Theme ===== */
+:root {
+  --bg-dark: #0a0a1a;
+  --bg-darker: #050510;
+  --primary-blue: #0066ff;
+  --primary-purple: #9b4dff;
+  --accent-cyan: #00e5ff;
+  --accent-pink: #ff3d8c;
+  --glass-bg: rgba(20, 20, 50, 0.7);
+  --glass-border: rgba(0, 102, 255, 0.3);
+  --card-bg: rgba(15, 15, 35, 0.8);
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Custom Cursor (Desktop only) */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-cyan);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 229, 255, 0.2);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.2s ease;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(2px);
+}
+
+/* Animated Gradient Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(125deg, var(--bg-darker) 0%, #0a0a2a 25%, #0f0f35 50%, #0a0a2a 75%, var(--bg-darker) 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glassmorphism Enhancements */
+.glass-card {
+  background: rgba(15, 15, 35, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+
+  .glass-card:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    transform: translateY(-5px);
+  }
+
+/* Modern Typography */
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  color: #e0e0ff;
+  line-height: 1.6;
+}
+
+/* Scroll Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* Skill Bars */
+.skill-bar-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.skill-bar {
+  width: 0;
+  height: 8px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+  border-radius: 10px;
+  transition: width 1s ease-out;
+}
+
+/* Responsive Grid Improvements */
+@media (max-width: 768px) {
+  .projects-grid, .skills-groups {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,135 @@
+/* ===== SKILLS PAGE STYLES ===== */
+
+h2 {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #fff, var(--accent-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skill-group {
+  background: rgba(15, 15, 35, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 24px;
+  padding: 1.8rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+  .skill-group:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.2);
+  }
+
+  .skill-group h3 {
+    color: var(--accent-cyan);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    border-left: 3px solid var(--primary-blue);
+    padding-left: 0.8rem;
+  }
+
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+  .skill-item span {
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+.skill-bar-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 5px;
+  height: 8px;
+}
+
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+  width: 0;
+  border-radius: 12px;
+  transition: width 1s cubic-bezier(0.22, 0.97, 0.36, 1.02);
+}
+
+/* Certifications section */
+.certifications {
+  margin-top: 3rem;
+  background: rgba(15, 15, 35, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 24px;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+  .certifications:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.15);
+  }
+
+  .certifications h3 {
+    color: var(--accent-cyan);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .certifications ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .certifications li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+    .certifications li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--primary-blue);
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .skills-groups {
+    gap: 1.2rem;
+    padding: 0 0.8rem;
+  }
+
+  .skill-group {
+    padding: 1.2rem;
+  }
+
+    .skill-group h3 {
+      font-size: 1.2rem;
+    }
+
+  .certifications {
+    margin: 2rem 0.8rem;
+    padding: 1.2rem;
+  }
+}

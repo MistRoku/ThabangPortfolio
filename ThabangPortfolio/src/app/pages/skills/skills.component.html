@@ -1,10 +1,14 @@
 <div class="container">
   <h2>Technical Skills</h2>
   <div class="skills-groups">
-    <div *ngFor="let group of skillGroups" class="skill-group">
+    <div *ngFor="let group of skillGroups" class="skill-group glass-card fade-up">
       <h3>{{ group.category }}</h3>
-      <div class="skills-list"><span *ngFor="let skill of group.items">{{ skill }}</span></div>
+      <div *ngFor="let skill of group.items" class="skill-item">
+        <span>{{ skill }}</span>
+        <div class="skill-bar-container">
+          <div class="skill-bar" [style.width.%]="getSkillPercentage(skill)"></div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="certifications"><h3>Certifications</h3><ul><li *ngFor="let cert of certifications">{{ cert }}</li></ul></div>
 </div>
