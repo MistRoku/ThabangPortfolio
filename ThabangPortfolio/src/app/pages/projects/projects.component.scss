@@ -1,146 +1,241 @@
-/* ===== PROJECTS PAGE STYLES ===== */
+/* Projects page: single horizontal scroll strip. Flat theme, square corners, static cards. */
 
-h2 {
-  text-align: center;
-  margin: 3rem 0 2rem;
-  font-size: 2.2rem;
-  background: linear-gradient(135deg, #fff, var(--accent-cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: -0.5px;
+.page-sub {
+  color: var(--text-muted);
+  max-width: 640px;
+  margin-bottom: 1.25rem;
 }
 
-/* Grid layout */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  margin: 0 auto;
-  padding: 0 1rem;
+.scroll-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
-/* Card styling – enhanced glassmorphism */
-.card {
-  background: rgba(15, 15, 35, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  border-radius: 24px;
+.scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.projects-scroll {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.project-card,
+.skeleton-card {
+  flex: 0 0 320px;
+  width: 320px;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-  .card:hover {
-    transform: translateY(-8px) scale(1.01);
-    border-color: var(--accent-cyan);
-    box-shadow: 0 15px 35px rgba(0, 229, 255, 0.25);
-  }
-
-/* Card image */
 .card-img {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-color: #1a1a2e; /* fallback if image missing */
-  transition: transform 0.4s ease;
+  height: 180px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.card:hover .card-img {
-  transform: scale(1.02);
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Card content */
+.card-img.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
 .card-content {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
-  .card-content h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    color: white;
-    line-height: 1.3;
-  }
+.card-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  line-height: 1.35;
+}
 
 .tech {
-  color: var(--accent-cyan);
-  font-weight: 600;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.3px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
-.card-content p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #c0c0e0;
-  margin-bottom: 1rem;
+.card-content .desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 0.75rem;
 }
 
 .highlight {
-  background: rgba(0, 102, 255, 0.2);
-  border-left: 3px solid var(--accent-cyan);
-  padding: 0.5rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.85rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0;
+  font-size: 0.82rem;
+  color: var(--text);
   margin-bottom: 1rem;
 }
 
-/* Project links (Live Demo, GitHub) */
 .project-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
-.btn.small {
+.project-links .btn.small,
+.modal-links .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Skeleton state */
+.skeleton-card {
+  cursor: default;
+}
+
+.skeleton-media {
+  height: 180px;
+  border-bottom: 1px solid var(--border);
+}
+
+.skeleton-line {
+  margin: 0.6rem 0;
+}
+
+.skeleton-line.title {
+  height: 18px;
+}
+
+.skeleton-line.short {
+  width: 70%;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 10, 13, 0.85);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 760px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
   background: transparent;
-  border: 1px solid var(--accent-cyan);
-  color: var(--accent-cyan);
-  padding: 0.3rem 1rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  transition: 0.2s;
-  text-decoration: none;
-  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
 }
 
-  .btn.small:hover {
-    background: var(--accent-cyan);
-    color: #0a0a1a;
-    box-shadow: 0 0 8px var(--accent-cyan);
-  }
+.modal-body h2 {
+  font-size: 1.6rem;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--text);
+}
 
-/* Responsive adjustments */
+.modal-description {
+  margin: 1rem 0 1.5rem;
+  line-height: 1.65;
+}
+
+.modal-body h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--text);
+}
+
+.plain-list {
+  margin: 0 0 0.5rem 1.25rem;
+  padding: 0;
+}
+
+.plain-list li {
+  margin: 0.45rem 0;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.user-guide {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.modal-image {
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+}
+
+.modal-image img {
+  width: 100%;
+  display: block;
+}
+
 @media (max-width: 768px) {
-  h2 {
-    font-size: 1.8rem;
-    margin: 2rem 0 1.5rem;
+  .project-card,
+  .skeleton-card {
+    flex-basis: 270px;
+    width: 270px;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 0.8rem;
-  }
-
-  .card-img {
-    height: 160px;
-  }
-
-  .card-content {
-    padding: 1.2rem;
-  }
-
-    .card-content h3 {
-      font-size: 1.2rem;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .modal-content {
+    padding: 1.25rem;
   }
 }

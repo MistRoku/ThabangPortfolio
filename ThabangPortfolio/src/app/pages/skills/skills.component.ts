@@ -1,21 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioDataService, SkillGroup } from '../../services/portfolio-data.service';
+import { LucideFileText, LucideWrench } from '@lucide/angular';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LucideFileText, LucideWrench],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
   skillGroups: SkillGroup[] = [];
   certifications: string[] = [];
+  loading = true;
+  skeletonGroups = [1, 2];
+
   constructor(private data: PortfolioDataService) { }
+
   ngOnInit() {
-    this.skillGroups = this.data.getskills();
-    this.certifications = this.data.getCertifications();
+    setTimeout(() => {
+      this.skillGroups = this.data.getskills();
+      this.certifications = this.data.getCertifications();
+      this.loading = false;
+    }, 500);
   }
 
   getSkillPercentage(skill: string): number {

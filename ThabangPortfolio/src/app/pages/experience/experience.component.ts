@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioDataService, WorkExperience, Education } from '../../services/portfolio-data.service';
+import { LucideBriefcase, LucideGraduationCap } from '@lucide/angular';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LucideBriefcase, LucideGraduationCap],
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
@@ -18,4 +19,3 @@ export class ExperienceComponent implements OnInit {
     this.education = this.data.getEducation();
   }
 }
-

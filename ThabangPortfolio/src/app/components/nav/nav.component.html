@@ -1,11 +1,12 @@
 <nav class="navbar">
   <div class="nav-container">
     <a class="logo" routerLink="/">
-      <img src="TM_Logo.png" alt="Logo" class="logo-img">
+      <img src="TM_Logo.png" alt="TM logo" class="logo-img">
       <span class="logo-text">TM</span>
     </a>
-    <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
+    <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+      <svg lucideMenu *ngIf="!menuOpen"></svg>
+      <svg lucideX *ngIf="menuOpen"></svg>
     </button>
     <ul class="nav-links" [class.active]="menuOpen">
       <li><a routerLink="/" (click)="closeMenu()">Home</a></li>

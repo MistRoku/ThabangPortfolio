@@ -1,139 +1,165 @@
-/* You can add global styles to this file, and also import other style files */
-/* ===== Enhanced Blue-Black-Purple Tech Theme ===== */
-/* Force vertical scrolling – prevents modal lock */
-html, body {
-  overflow-y: auto !important;
-  height: auto !important;
-  min-height: 100vh;
+/* Global styles: flat solid theme with square corners and static elements. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #101418;
+  --surface: #181e25;
+  --surface-2: #202832;
+  --text: #e6e9ed;
+  --text-muted: #9aa5b1;
+  --border: #2e3842;
+  --accent: #2f66d0;
+  --accent-strong: #2553ad;
+  --accent-text: #ffffff;
+  --error: #c0362c;
+  --success: #2e7d46;
+  --font: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --radius: 0;
+}
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* ===== Enhanced Blue-Black-Purple Tech Theme ===== */
-:root {
-  --bg-dark: #0a0a1a;
-  --bg-darker: #050510;
-  --primary-blue: #0066ff;
-  --primary-purple: #9b4dff;
-  --accent-cyan: #00e5ff;
-  --accent-pink: #ff3d8c;
-  --glass-bg: rgba(20, 20, 50, 0.7);
-  --glass-border: rgba(0, 102, 255, 0.3);
-  --card-bg: rgba(15, 15, 35, 0.8);
-  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Custom Cursor (Desktop only) */
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--accent-cyan);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: all 0.1s ease;
-  transform: translate(-50%, -50%);
-}
-
-.cursor-follower {
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 229, 255, 0.2);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transition: all 0.2s ease;
-  transform: translate(-50%, -50%);
-  backdrop-filter: blur(2px);
-}
-
-/* Animated Gradient Background */
-.animated-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+html, body {
   height: 100%;
-  z-index: -2;
-  background: linear-gradient(125deg, var(--bg-darker) 0%, #0a0a2a 25%, #0f0f35 50%, #0a0a2a 75%, var(--bg-darker) 100%);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Glassmorphism Enhancements */
-.glass-card {
-  background: rgba(15, 15, 35, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  border-radius: 20px;
-  transition: var(--transition-smooth);
-}
-
-  .glass-card:hover {
-    border-color: var(--accent-cyan);
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
-    transform: translateY(-5px);
-  }
-
-/* Modern Typography */
-body {
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  color: #e0e0ff;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Scroll Animations */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+a {
+  color: var(--accent);
 }
 
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-/* Skill Bars */
-.skill-bar-container {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 10px 0;
+img {
+  max-width: 100%;
 }
 
-.skill-bar {
-  width: 0;
-  height: 8px;
-  background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
-  border-radius: 10px;
-  transition: width 1s ease-out;
+/* Flat panels with a 1px border. */
+.panel,
+.card,
+.modal-content,
+.contact-info,
+.contact-form,
+.skill-group,
+.timeline-item,
+.education,
+.certifications {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: none;
+  border-radius: 0;
 }
 
-/* Responsive Grid Improvements */
-@media (max-width: 768px) {
-  .projects-grid, .skills-groups {
-    grid-template-columns: 1fr;
-  }
+/* Buttons: solid fill, square corners, no transition, no shadow. */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--accent-text);
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text);
+}
+
+.btn.small {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text);
+  border-radius: 0;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+/* Chips and tags: flat, square. */
+.chip, .skill-tag {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+/* Remove transitions and hover animation everywhere. */
+*, *::before, *::after {
+  transition: none;
+  animation-duration: 0.01ms;
+}
+
+a:hover, button:hover, .btn:hover {
+  filter: none;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Skeleton loader: flat stepped blocks, no gradient shimmer. */
+.skeleton {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  min-height: 1rem;
+}
+
+.skeleton-block {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+.skeleton-line {
+  height: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  margin-bottom: 0.6rem;
+}
+
+/* Lucide icons: fixed size, current color, no decoration. */
+.lucide, svg.lucide {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin: 2.5rem 0 1.5rem;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.section-label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
 }

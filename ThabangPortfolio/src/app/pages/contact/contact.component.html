@@ -1,26 +1,40 @@
 <div class="container contact-page">
-  <div class="contact-info glass-card">
+  <div class="contact-info">
+    <p class="section-label">Contact</p>
     <h2>Get In Touch</h2>
-    <p><strong>Email:</strong> {{ personalInfo.email }}</p>
-    <p><strong>Phone:</strong> {{ personalInfo.phone }}</p>
-    <p><strong>Location:</strong> {{ personalInfo.location }}</p>
-    <p><strong>Reference:</strong> Paul Nyembo — Manager, CSD at Reliance Corporation | +27 82 677 4412</p>
+    <p class="contact-row">
+      <svg lucideMail></svg>
+      <span><strong>Email:</strong> {{ personalInfo.email }}</span>
+    </p>
+    <p class="contact-row">
+      <svg lucidePhone></svg>
+      <span><strong>Phone:</strong> {{ personalInfo.phone }}</span>
+    </p>
+    <p class="contact-row">
+      <svg lucideMapPin></svg>
+      <span><strong>Location:</strong> {{ personalInfo.location }}</span>
+    </p>
+    <p class="contact-row">
+      <svg lucideCircleUser></svg>
+      <span><strong>Reference:</strong> Paul Nyembo, Manager, CSD at Reliance Corporation | +27 82 677 4412</span>
+    </p>
   </div>
-  <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="contact-form glass-card">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="contact-form">
     <div class="form-group">
-      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
       <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
     </div>
     <div class="form-group">
-      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
       <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
     </div>
     <div class="form-group">
-      <textarea id="message" name="message" [(ngModel)]="formData.message" required rows="5"></textarea>
       <label for="message">Your Message</label>
+      <textarea id="message" name="message" [(ngModel)]="formData.message" required rows="5"></textarea>
     </div>
-    <button type="submit" [disabled]="sending" class="btn primary">
-      {{ sending ? 'Sending...' : 'Send Message' }}
+    <button type="submit" [disabled]="sending" class="btn">
+      <svg lucideSend></svg>
+      <span>{{ sending ? 'Sending...' : 'Send Message' }}</span>
     </button>
     <p *ngIf="successMsg" class="success">{{ successMsg }}</p>
     <p *ngIf="errorMsg" class="error">{{ errorMsg }}</p>

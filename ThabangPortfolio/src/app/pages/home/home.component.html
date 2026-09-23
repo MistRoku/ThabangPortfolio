@@ -1,27 +1,32 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
-    <!-- Logo and text side by side -->
     <div class="hero-row">
-      <img src="TM_Logo.png" alt="Logo" class="hero-logo">
+      <img src="TM_Logo.png" alt="Thabang Mokgonyana logo" class="hero-logo">
       <div class="hero-text">
+        <p class="section-label">Portfolio</p>
         <h1>{{ personalInfo.name }}</h1>
-        <p class="lead typing-text"></p>
+        <p class="lead">{{ personalInfo.title }}</p>
         <p>{{ personalInfo.summary }}</p>
         <div class="cta-buttons">
-          <a class="btn primary" [routerLink]="['/projects']">View Projects</a>
-          <button class="btn secondary" (click)="downloadCV()">Download CV</button>
+          <a class="btn" [routerLink]="['/projects']">
+            <svg lucideFolderOpen></svg>
+            <span>View Projects</span>
+          </a>
+          <button class="btn secondary" (click)="downloadCV()">
+            <svg lucideDownload></svg>
+            <span>Download CV</span>
+          </button>
         </div>
       </div>
     </div>
-    <!-- Decorative sphere (optional, positioned absolutely) -->
-    <div class="tech-sphere"></div>
   </div>
 </section>
 
 <!-- Core Competencies Section -->
-<section class="competencies fade-up">
+<section class="competencies">
   <div class="container">
+    <p class="section-label">Capabilities</p>
     <h2>Core Competencies</h2>
     <div class="chips">
       <span *ngFor="let skill of coreSkills" class="chip">{{ skill }}</span>

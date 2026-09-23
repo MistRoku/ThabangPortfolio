@@ -1,14 +1,41 @@
 <div class="container">
-  <h2>Technical Skills</h2>
-  <div class="skills-groups">
-    <div *ngFor="let group of skillGroups" class="skill-group glass-card fade-up">
-      <h3>{{ group.category }}</h3>
+  <p class="section-label">Capabilities</p>
+  <h2 class="page-title">Technical Skills</h2>
+
+  <div *ngIf="loading" class="skills-list" aria-label="Loading skills">
+    <div *ngFor="let item of skeletonGroups" class="skill-group" aria-hidden="true">
+      <div class="skeleton skeleton-line title"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+  <div *ngIf="!loading" class="skills-list">
+    <div *ngFor="let group of skillGroups" class="skill-group">
+      <h3>
+        <svg lucideWrench></svg>
+        <span>{{ group.category }}</span>
+      </h3>
       <div *ngFor="let skill of group.items" class="skill-item">
-        <span>{{ skill }}</span>
+        <div class="skill-row">
+          <span>{{ skill }}</span>
+          <span class="skill-pct">{{ getSkillPercentage(skill) }} percent</span>
+        </div>
         <div class="skill-bar-container">
           <div class="skill-bar" [style.width.%]="getSkillPercentage(skill)"></div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div *ngIf="!loading" class="certifications">
+    <h3>
+      <svg lucideFileText></svg>
+      <span>Certifications</span>
+    </h3>
+    <ul class="plain-list">
+      <li *ngFor="let cert of certifications">{{ cert }}</li>
+    </ul>
   </div>
 </div>

@@ -1,11 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioDataService, Project } from '../../services/portfolio-data.service';
+import {
+  LucideX,
+  LucideChevronLeft,
+  LucideChevronRight,
+  LucideCode,
+  LucideExternalLink,
+  LucideBookOpen,
+  LucideLayers,
+  LucideWrench,
+} from '@lucide/angular';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    LucideX,
+    LucideChevronLeft,
+    LucideChevronRight,
+    LucideCode,
+    LucideExternalLink,
+    LucideBookOpen,
+    LucideLayers,
+    LucideWrench,
+  ],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
@@ -13,11 +33,26 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
   selectedProject: Project | null = null;
   modalOpen = false;
+  loading = true;
+  skeletonItems = [1, 2, 3, 4];
+
+  @ViewChild('scrollTrack') scrollTrack!: ElementRef<HTMLElement>;
 
   constructor(private data: PortfolioDataService) { }
 
   ngOnInit() {
-    this.projects = this.data.getProjects();
+    // Skeleton loader visible while content prepares.
+    setTimeout(() => {
+      this.projects = this.data.getProjects();
+      this.loading = false;
+    }, 700);
+  }
+
+  scrollByAmount(amount: number) {
+    const el = this.scrollTrack?.nativeElement;
+    if (el) {
+      el.scrollBy({ left: amount, behavior: 'auto' });
+    }
   }
 
   openModal(project: Project) {

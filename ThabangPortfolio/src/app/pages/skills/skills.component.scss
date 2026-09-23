@@ -1,135 +1,115 @@
-/* ===== SKILLS PAGE STYLES ===== */
+/* Skills page: uniform two column list, flat panels, solid bars, static content. */
 
-h2 {
-  text-align: center;
-  margin: 3rem 0 2rem;
-  font-size: 2.2rem;
-  background: linear-gradient(135deg, #fff, var(--accent-cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: -0.5px;
-}
-
-.skills-groups {
+.skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .skill-group {
-  background: rgba(15, 15, 35, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  border-radius: 24px;
-  padding: 1.8rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.5rem;
 }
 
-  .skill-group:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-cyan);
-    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.2);
-  }
-
-  .skill-group h3 {
-    color: var(--accent-cyan);
-    margin-bottom: 1.2rem;
-    font-size: 1.4rem;
-    border-left: 3px solid var(--primary-blue);
-    padding-left: 0.8rem;
-  }
+.skill-group h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  margin-bottom: 1.1rem;
+  font-size: 1.2rem;
+}
 
 .skill-item {
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
-  .skill-item span {
-    font-weight: 500;
-    font-size: 0.9rem;
-    display: block;
-    margin-bottom: 0.3rem;
-  }
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.skill-row span {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.skill-pct {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+}
 
 .skill-bar-container {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0;
   overflow: hidden;
-  margin-top: 5px;
+  margin-top: 0.35rem;
   height: 8px;
 }
 
 .skill-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+  background: var(--accent);
   width: 0;
-  border-radius: 12px;
-  transition: width 1s cubic-bezier(0.22, 0.97, 0.36, 1.02);
+  border-radius: 0;
 }
 
-/* Certifications section */
 .certifications {
-  margin-top: 3rem;
-  background: rgba(15, 15, 35, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 102, 255, 0.3);
-  border-radius: 24px;
-  padding: 1.8rem;
-  transition: all 0.3s ease;
+  margin-top: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.5rem;
 }
 
-  .certifications:hover {
-    border-color: var(--accent-cyan);
-    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.15);
-  }
+.certifications h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
 
-  .certifications h3 {
-    color: var(--accent-cyan);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-  }
+.plain-list {
+  list-style: square;
+  margin-left: 1.25rem;
+  padding: 0;
+}
 
-  .certifications ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
+.plain-list li {
+  margin: 0.5rem 0;
+  line-height: 1.55;
+}
 
-  .certifications li {
-    margin: 0.8rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-  }
+.skeleton-line {
+  margin: 0.6rem 0;
+}
 
-    .certifications li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: var(--primary-blue);
-    }
+.skeleton-line.title {
+  height: 18px;
+  width: 50%;
+}
 
-/* Responsive adjustments */
+.skeleton-line.short {
+  width: 70%;
+}
+
 @media (max-width: 768px) {
-  h2 {
-    font-size: 1.8rem;
-    margin: 2rem 0 1.5rem;
-  }
-
-  .skills-groups {
-    gap: 1.2rem;
-    padding: 0 0.8rem;
+  .skills-list {
+    grid-template-columns: 1fr;
   }
 
   .skill-group {
-    padding: 1.2rem;
-  }
-
-    .skill-group h3 {
-      font-size: 1.2rem;
-    }
-
-  .certifications {
-    margin: 2rem 0.8rem;
     padding: 1.2rem;
   }
 }
