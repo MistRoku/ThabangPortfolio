@@ -35,6 +35,7 @@ export class ProjectsComponent implements OnInit {
   modalOpen = false;
   loading = true;
   skeletonItems = [1, 2, 3, 4];
+  private imgFailed = new Set<string>();
 
   @ViewChild('scrollTrack') scrollTrack!: ElementRef<HTMLElement>;
 
@@ -48,11 +49,18 @@ export class ProjectsComponent implements OnInit {
     }, 700);
   }
 
-  scrollByAmount(amount: number) {
-    const el = this.scrollTrack?.nativeElement;
+  scrollByAmount(amount: number) {    const el = this.scrollTrack?.nativeElement;
     if (el) {
       el.scrollBy({ left: amount, behavior: 'auto' });
     }
+  }
+
+  onImgError(project: Project) {
+    this.imgFailed.add(project.title);
+  }
+
+  showImg(project: Project): boolean {
+    return !!project.imageUrl && !this.imgFailed.has(project.title);
   }
 
   openModal(project: Project) {
