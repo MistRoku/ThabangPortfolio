@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PortfolioDataService } from '../../services/portfolio-data.service';
@@ -21,7 +21,8 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private data: PortfolioDataService,
-    private emailService: EmailService
+    private emailService: EmailService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
@@ -48,6 +49,9 @@ export class ContactComponent implements OnInit {
       }
     } finally {
       this.sending = false;
+      // Push the state change to the view even if a promise resolution
+      // does not schedule change detection on its own.
+      this.cdr.detectChanges();
     }
   }
 

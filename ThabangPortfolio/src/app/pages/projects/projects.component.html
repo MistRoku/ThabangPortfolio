@@ -8,15 +8,15 @@
       <svg lucideChevronLeft></svg>
       <span>Prev</span>
     </button>
-    <span class="scroll-count" *ngIf="!loading">{{ projects.length }} projects</span>
+    <span class="scroll-count">{{ projects.length }} projects</span>
     <button type="button" class="btn small scroll-btn" (click)="scrollByAmount(340)" aria-label="Scroll projects to next items">
       <span>Next</span>
       <svg lucideChevronRight></svg>
     </button>
   </div>
 
-  <!-- Skeleton loaders while projects prepare -->
-  <div *ngIf="loading" class="projects-scroll" aria-label="Loading projects">
+  <!-- Skeleton loaders on first paint -->
+  <div *ngIf="loading()" class="projects-scroll" aria-label="Loading projects">
     <div *ngFor="let item of skeletonItems" class="card skeleton-card" aria-hidden="true">
       <div class="skeleton skeleton-media"></div>
       <div class="card-content">
@@ -28,8 +28,8 @@
     </div>
   </div>
 
-  <!-- Horizontal scroll strip, one row, no 3 column grid -->
-  <div *ngIf="!loading" #scrollTrack class="projects-scroll" tabindex="0" aria-label="Project list, scroll horizontally">
+  <!-- Horizontal scroll strip, one row -->
+  <div *ngIf="!loading()" #scrollTrack class="projects-scroll" tabindex="0" aria-label="Project list, scroll horizontally">
     <article *ngFor="let project of projects" class="card project-card" (click)="openModal(project)" (keydown.enter)="openModal(project)" tabindex="0">
       <div class="card-img" *ngIf="showImg(project)">
         <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" decoding="async" (error)="onImgError(project)">
@@ -54,6 +54,7 @@
         </div>
       </div>
     </article>
+    <p *ngIf="projects.length === 0" class="empty-note">No projects to show right now.</p>
   </div>
 </div>
 

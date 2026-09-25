@@ -2,7 +2,7 @@
   <p class="section-label">Capabilities</p>
   <h2 class="page-title">Technical Skills</h2>
 
-  <div *ngIf="loading" class="skills-list" aria-label="Loading skills">
+  <div *ngIf="loading()" class="skills-list" aria-label="Loading skills">
     <div *ngFor="let item of skeletonGroups" class="skill-group" aria-hidden="true">
       <div class="skeleton skeleton-line title"></div>
       <div class="skeleton skeleton-line"></div>
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div *ngIf="!loading" class="skills-list">
+  <div *ngIf="!loading()" class="skills-list">
     <div *ngFor="let group of skillGroups" class="skill-group">
       <h3>
         <svg lucideWrench></svg>
@@ -28,8 +28,9 @@
       </div>
     </div>
   </div>
+  <p *ngIf="!loading() && skillGroups.length === 0" class="empty-note">No skills to show right now.</p>
 
-  <div *ngIf="!loading" class="certifications">
+  <div *ngIf="!loading() && certifications.length > 0" class="certifications">
     <h3>
       <svg lucideFileText></svg>
       <span>Certifications</span>

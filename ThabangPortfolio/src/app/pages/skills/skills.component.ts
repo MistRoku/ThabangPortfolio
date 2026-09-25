@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal, afterNextRender, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioDataService, SkillGroup } from '../../services/portfolio-data.service';
 import { LucideFileText, LucideWrench } from '@lucide/angular';
@@ -11,19 +11,26 @@ import { LucideFileText, LucideWrench } from '@lucide/angular';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+  // Data is assigned synchronously in ngOnInit, so the content is part of
+  // the very first render pass and can never get stuck behind a timer.
   skillGroups: SkillGroup[] = [];
   certifications: string[] = [];
-  loading = true;
+
+  // Skeleton loaders show on first paint, then swap to content after the
+  // first render commits. A signal write notifies Angular in both zoned
+  // and zoneless change detection, so the swap cannot stick.
+  loading = signal(true);
   skeletonGroups = [1, 2];
 
-  constructor(private data: PortfolioDataService) { }
+  private data = inject(PortfolioDataService);
+
+  constructor() {
+    afterNextRender(() => this.loading.set(false));
+  }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.skillGroups = this.data.getskills();
-      this.certifications = this.data.getCertifications();
-      this.loading = false;
-    }, 200);
+    this.skillGroups = this.data.getskills();
+    this.certifications = this.data.getCertifications();
   }
 
   getSkillPercentage(skill: string): number {

@@ -1,4 +1,13 @@
-import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  ViewChild,
+  HostListener,
+  signal,
+  afterNextRender,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioDataService, Project } from '../../services/portfolio-data.service';
 import {
@@ -30,26 +39,33 @@ import {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  // Data is assigned synchronously in ngOnInit, so the content is part of
+  // the very first render pass and can never get stuck behind a timer.
   projects: Project[] = [];
   selectedProject: Project | null = null;
   modalOpen = false;
-  loading = true;
+
+  // Skeleton loaders show on first paint, then swap to content after the
+  // first render commits. A signal write notifies Angular in both zoned
+  // and zoneless change detection, so the swap cannot stick.
+  loading = signal(true);
   skeletonItems = [1, 2, 3, 4];
   private imgFailed = new Set<string>();
 
   @ViewChild('scrollTrack') scrollTrack!: ElementRef<HTMLElement>;
 
-  constructor(private data: PortfolioDataService) { }
+  private data = inject(PortfolioDataService);
 
-  ngOnInit() {
-    // Skeleton loader covers the synchronous data read so the layout never jumps.
-    setTimeout(() => {
-      this.projects = this.data.getProjects();
-      this.loading = false;
-    }, 200);
+  constructor() {
+    afterNextRender(() => this.loading.set(false));
   }
 
-  scrollByAmount(amount: number) {    const el = this.scrollTrack?.nativeElement;
+  ngOnInit() {
+    this.projects = this.data.getProjects();
+  }
+
+  scrollByAmount(amount: number) {
+    const el = this.scrollTrack?.nativeElement;
     if (el) {
       el.scrollBy({ left: amount, behavior: 'auto' });
     }
