@@ -59,7 +59,8 @@
 }
 
 .nav-links a:active,
-.nav-links a:focus {
+.nav-links a:focus,
+.nav-links a.active {
   color: var(--text);
   border-bottom-color: var(--accent);
 }
