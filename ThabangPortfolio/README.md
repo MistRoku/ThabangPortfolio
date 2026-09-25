@@ -26,6 +26,7 @@ ThabangPortfolio/
 ## Features
 
 - Fully responsive layout with mobile menu and fluid panels
+- Lazy-loaded routes, so the first paint only downloads the shell and the home page
 - Hash-based routing, so the production build runs on any static host
 - Projects browser as a horizontal scroll strip with skeleton loaders and a detail modal per project
 - Lucide icon set throughout, no emoji icons
@@ -46,10 +47,10 @@ ThabangPortfolio/
 
 ## Projects showcased
 
-1. BranchOps - Multi-Branch Retail Operations Platform (Laravel 11, PHP 8.3, Blade, Alpine.js, Tailwind, MySQL, Docker). POS terminal, cash drawer, refunds, branch transfers, stock takes, Sanctum-secured REST API, row-locked inventory ledger. Repo: https://github.com/MistRoku/Branch-ops
-2. AssetArray - Inventory Management API (Laravel 13, PHP 8.3, Sanctum, MySQL, Scribe, GitHub Actions). API-first multi-branch backend with a two-phase transfer state machine and auto-generated OpenAPI docs. Repo: https://github.com/MistRoku/assetarray-api
-3. RetailPulse - Retail Dashboard UI Architecture Demo (Laravel 12, Blade, Alpine.js, Tailwind CSS, Vite). Frontend component library with a mock data provider and route-level test sweep. Repo: https://github.com/MistRoku/retailpulse-dashboard-ui
-4. AdminForge - Multi-Tenant SaaS Dashboard (Laravel 11, Angular 21, MySQL, Stripe, Docker)
+1. Crown and Clipper Barber Co. - Booking Platform (React 18, TypeScript, Vite, C#, ASP.NET Core 8, EF Core, SQLite, Docker). 4-step booking wizard, conflict-safe booking engine, notification outbox, multi-tenant dashboards. Live: https://crowns-and-clippers.netlify.app/ Repo: https://github.com/MistRoku/crowns_and_clipperd
+2. BranchOps - Multi-Branch Retail Operations Platform (Laravel 11, PHP 8.3, Blade, Alpine.js, Tailwind, MySQL, Docker). POS terminal, cash drawer, refunds, branch transfers, stock takes, Sanctum-secured REST API, row-locked inventory ledger. Repo: https://github.com/MistRoku/Branch-ops
+3. AssetArray - Inventory Management API (Laravel 13, PHP 8.3, Sanctum, MySQL, Scribe, GitHub Actions). API-first multi-branch backend with a two-phase transfer state machine and auto-generated OpenAPI docs. Repo: https://github.com/MistRoku/assetarray-api
+4. RetailPulse - Retail Dashboard UI Architecture Demo (Laravel 12, Blade, Alpine.js, Tailwind CSS, Vite). Frontend component library with a mock data provider and route-level test sweep. Repo: https://github.com/MistRoku/retailpulse-dashboard-ui
 5. Helpdesk Ticketing System - Cloud Deployed (ASP.NET Core 10, React 19, SignalR, Azure, Docker)
 6. RCPOS and RCPOS Lite - Restaurant POS (PHP, Laravel, JavaScript, MySQL, LocalStorage API)
 7. Light of Literacy, 94 percent Distinction (Kotlin, Node.js, MySQL, Firebase, Azure DevOps)

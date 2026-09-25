@@ -4,12 +4,13 @@
   <p class="page-sub">Each card opens a detail view with stack, functions, and a usage summary. Scroll sideways to browse the full list.</p>
 
   <div class="scroll-controls">
-    <button type="button" class="btn small scroll-btn" (click)="scrollByAmount(-340)" aria-label="Scroll projects left">
+    <button type="button" class="btn small scroll-btn" (click)="scrollByAmount(-340)" aria-label="Scroll projects to previous items">
       <svg lucideChevronLeft></svg>
-      <span>Back</span>
+      <span>Prev</span>
     </button>
-    <button type="button" class="btn small scroll-btn" (click)="scrollByAmount(340)" aria-label="Scroll projects right">
-      <span>More</span>
+    <span class="scroll-count" *ngIf="!loading">{{ projects.length }} projects</span>
+    <button type="button" class="btn small scroll-btn" (click)="scrollByAmount(340)" aria-label="Scroll projects to next items">
+      <span>Next</span>
       <svg lucideChevronRight></svg>
     </button>
   </div>
@@ -31,7 +32,7 @@
   <div *ngIf="!loading" #scrollTrack class="projects-scroll" tabindex="0" aria-label="Project list, scroll horizontally">
     <article *ngFor="let project of projects" class="card project-card" (click)="openModal(project)" (keydown.enter)="openModal(project)" tabindex="0">
       <div class="card-img" *ngIf="showImg(project)">
-        <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" (error)="onImgError(project)">
+        <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" decoding="async" (error)="onImgError(project)">
       </div>
       <div class="card-img placeholder" *ngIf="!showImg(project)" aria-hidden="true">
         <svg lucideBookOpen></svg>
@@ -67,7 +68,7 @@
       <h2>{{ selectedProject.title }}</h2>
       <p class="tech">{{ selectedProject.techStack }}</p>
       <div class="modal-image" *ngIf="selectedProject.imageUrl && showImg(selectedProject)">
-        <img [src]="selectedProject.imageUrl" [alt]="selectedProject.title" (error)="onImgError(selectedProject)">
+        <img [src]="selectedProject.imageUrl" [alt]="selectedProject.title" decoding="async" (error)="onImgError(selectedProject)">
       </div>
       <p class="modal-description">{{ selectedProject.fullDescription }}</p>
 

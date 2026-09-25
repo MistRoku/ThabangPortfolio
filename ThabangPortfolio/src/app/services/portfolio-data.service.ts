@@ -54,6 +54,34 @@ export class PortfolioDataService {
   getProjects(): Project[] {
     return [
       {
+        title: 'Crown and Clipper Barber Co. - Booking Platform',
+        techStack: 'React 18, TypeScript, Vite, C#, ASP.NET Core 8, EF Core, SQLite, Docker',
+        description: 'Full-stack barbershop booking platform: 4-step wizard with live availability, double-booking prevention, stylist qualification enforcement, automated reminders and Google/Apple/Outlook calendar integration. Containerised and deployed end to end.',
+        imageUrl: 'crown-and-clipper.png',
+        demoLink: 'https://crowns-and-clippers.netlify.app/',
+        githubLink: 'https://github.com/MistRoku/crowns_and_clipperd',
+        highlight: 'Live availability engine | Notification outbox with idempotency | Docker + CI from GitHub',
+        fullDescription: 'Crown and Clipper is a complete booking platform for a premium barbershop, built as a production-style full-stack assessment. The React 18 and TypeScript frontend provides a 4-step booking wizard: service selection, qualified barber picking, live date and time availability on a 30-minute grid, and validated customer details. The ASP.NET Core 8 API enforces opening hours, a 1-hour lead time, double-booking prevention and stylist qualification rules server-side, so a braiding service can only book with the braiding specialist. A notification outbox with a background scheduler sends confirmations, cancellations and 24-hour and 2-hour reminders through a pluggable email transport, idempotent by dedupe key and tenant-timezone aware. The platform is multi-tenant with JWT authentication and three roles per tenant (Customer, Stylist, Admin), each with dedicated dashboards. Every confirmation offers Google Calendar, Apple Calendar (.ics) and Outlook downloads generated from the actual booking, correctly handling timezone transitions. The API is hardened with security headers, CSP, input sanitising, a request body cap, PII-safe booking lookup and 429 rate limiting, covered by a 44-check automated smoke test. The frontend deploys to Netlify and the containerised API to Render, both rebuilding automatically on every GitHub push.',
+        techStackDetails: [
+          'React 18 / TypeScript / Vite: SPA with React Router, Luxon date handling, custom design system',
+          'ASP.NET Core 8 Web API: controllers, DTOs, EF Core with query-filter data isolation',
+          'EF Core / SQLite: relational schema, conflict-safe booking writes, seeded catalogue',
+          'Multi-tenancy: tenant resolved by subdomain or shop switcher, JWT auth with three roles per tenant',
+          'Notification outbox: background scheduler, pluggable SMTP transport, idempotent by dedupe key',
+          'Docker: containerised API on Render, GitHub push-to-deploy on both platforms'
+        ],
+        keyFunctions: [
+          '4-step booking wizard with live availability on a 30-minute grid',
+          'Conflict-safe booking engine: 1-hour lead time, opening hours, double-booking prevention',
+          'Stylist qualification enforcement across wizard, availability engine and booking API',
+          'Automated confirmations, cancellations and 24-hour / 2-hour reminders via outbox pattern',
+          'Customer, stylist and admin dashboards with role-scoped data',
+          'Google Calendar, Apple Calendar (.ics) and Outlook integration per booking',
+          'Multi-tenant: multiple barbershops on one deployment with isolated data'
+        ],
+        userGuideSummary: 'Visit the live site, browse the service menu, and complete a booking in under a minute. Try a braiding service and notice it only offers the braiding specialist. Look up the booking afterwards with your reference and email. The full assessment documentation, security model and setup guides are in the repository docs folder.'
+      },
+      {
         title: 'BranchOps - Multi-Branch Retail Operations Platform',
         techStack: 'Laravel 11, PHP 8.3, Blade, Alpine.js, Tailwind, MySQL, Docker',
         description: 'Full-stack retail operations: POS terminal, cash drawer, refunds, branch transfers, stock takes, and a Sanctum-secured REST API. Concurrency-safe inventory with row locking and an append-only movement ledger.',
@@ -127,31 +155,6 @@ export class PortfolioDataService {
           'Swap-ready data layer: mock provider isolated behind one class'
         ],
         userGuideSummary: 'Standard Laravel setup: install dependencies, serve with Vite, and browse the dashboard, POS, products, reports, settings, and staff pages. The README states upfront that this is a frontend architecture demo with mock data. The intended next step is wiring these components to the AssetArray API.'
-      },
-      {
-        title: 'AdminForge - Multi-Tenant SaaS Dashboard',
-        techStack: 'Laravel 11, Angular 21, MySQL, Stripe, Docker',
-        description: 'Multi-tenant SaaS platform with Angular 21 frontend (RxJS dashboards, RBAC) and Laravel 11 backend. Integrated Stripe, 95 percent test coverage.',
-        githubLink: 'https://github.com/MistRoku/management-console',
-        highlight: '95 percent test coverage | Stripe subscriptions',
-        fullDescription: 'AdminForge is a complete production-ready SaaS dashboard that I architected to demonstrate full-stack multi-tenancy. It supports user roles (super admin, tenant admin, regular user), subscription billing, usage analytics, and a fully responsive admin panel. The frontend uses Angular 17 with lazy loading, HTTP interceptors, and RxJS for state management. The backend is Laravel 11 with Eloquent ORM, Sanctum token authentication, and multi-tenant middleware that isolates data per tenant. Payments are handled through Stripe (payment intents, webhooks, customer portal). The full application runs in Docker containers and deploys with zero-downtime releases.',
-        techStackDetails: [
-          'Angular 17: standalone components, lazy-loaded modules, RxJS, HTTP interceptors, RBAC guards',
-          'Laravel 11: REST API, Eloquent ORM, Sanctum token auth, multi-tenant middleware',
-          'MySQL: relational database with tenant-scoped foreign keys, migrations, indexes',
-          'Stripe: payment intents, subscription webhooks, customer billing portal',
-          'Docker: multi-stage builds for development and production environments',
-          'Laravel Forge: zero-downtime deployments, server management, SSL'
-        ],
-        keyFunctions: [
-          'Multi-tenant isolation: each tenant sees only their own data, plus configurable settings',
-          'Role-based access control (RBAC): super admin, tenant admin, regular member',
-          'Subscription plans (monthly/yearly) with automated invoicing and retries',
-          'Usage dashboard with charts and metrics',
-          'Team management: invite members, assign roles, set custom permissions',
-          'Billing portal for tenants to update payment methods and download invoices'
-        ],
-        userGuideSummary: 'After registration, tenant admins can invite team members, assign roles, and monitor usage from the dashboard. Super admins can access all tenants for support and view global analytics. For a full walkthrough, check the video demo on the GitHub repository or contact me for a live session.'
       },
       {
         title: 'Helpdesk Ticketing System - Cloud Deployed',

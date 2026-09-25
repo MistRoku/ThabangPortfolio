@@ -21,10 +21,10 @@ ng build
 
 ## Projects showcased
 
+- Crown and Clipper Barber Co. - Booking Platform (React 18, TypeScript, Vite, C#, ASP.NET Core 8, EF Core, SQLite, Docker). Live: https://crowns-and-clippers.netlify.app/ Repo: https://github.com/MistRoku/crowns_and_clipperd
 - BranchOps - Multi-Branch Retail Operations Platform (Laravel 11, PHP 8.3, Blade, Alpine.js, Tailwind, MySQL, Docker). Repo: https://github.com/MistRoku/Branch-ops
 - AssetArray - Inventory Management API (Laravel 13, PHP 8.3, Sanctum, MySQL, Scribe, GitHub Actions). Repo: https://github.com/MistRoku/assetarray-api
 - RetailPulse - Retail Dashboard UI Architecture Demo (Laravel 12, Blade, Alpine.js, Tailwind CSS, Vite). Repo: https://github.com/MistRoku/retailpulse-dashboard-ui
-- AdminForge - Multi-Tenant SaaS Dashboard (Laravel 11, Angular 21, MySQL, Stripe, Docker)
 - Helpdesk Ticketing System - Cloud Deployed (ASP.NET Core 10, React 19, SignalR, Azure, Docker)
 - RCPOS and RCPOS Lite - Restaurant POS (PHP, Laravel, JavaScript, MySQL, LocalStorage API)
 - Light of Literacy, 94 percent Distinction (Kotlin, Node.js, MySQL, Firebase, Azure DevOps)

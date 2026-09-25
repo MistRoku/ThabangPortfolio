@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioDataService, Project } from '../../services/portfolio-data.service';
 import {
@@ -42,11 +42,11 @@ export class ProjectsComponent implements OnInit {
   constructor(private data: PortfolioDataService) { }
 
   ngOnInit() {
-    // Skeleton loader visible while content prepares.
+    // Skeleton loader covers the synchronous data read so the layout never jumps.
     setTimeout(() => {
       this.projects = this.data.getProjects();
       this.loading = false;
-    }, 700);
+    }, 200);
   }
 
   scrollByAmount(amount: number) {    const el = this.scrollTrack?.nativeElement;
@@ -77,6 +77,13 @@ export class ProjectsComponent implements OnInit {
 
   onBackdropClick(event: MouseEvent) {
     if ((event.target as HTMLElement).classList.contains('modal')) {
+      this.closeModal();
+    }
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    if (this.modalOpen) {
       this.closeModal();
     }
   }
